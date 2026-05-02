@@ -6,14 +6,12 @@ class Solution {
         for(int i=0;i<n;i++){
             if(nums[i] == 1){
                 count++;
+                max = Math.max(max,count);
             }else{
-                if(max < count){
-                    max = count;
-                }
                 count = 0;
             }
         }
 
-        return Math.max(max,count);
+        return max;
     }
 }
